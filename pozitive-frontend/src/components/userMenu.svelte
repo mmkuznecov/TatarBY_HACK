@@ -75,14 +75,10 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="feather feather-user"
-    ><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle
-      cx="12"
-      cy="7"
-      r="4"
-    /></svg
-  ></button
->
+    class="feather feather-user">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4"/>
+  </svg>
+</button>
 
 {#if showUserMenu}
   <div id="myDropdown" class="dropdown-content">
@@ -235,7 +231,6 @@
   }
 
   #menu-button2:hover {
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     transform: translateY(-7px);
   }
 

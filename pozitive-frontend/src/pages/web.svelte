@@ -1,12 +1,13 @@
 <script>
   import { db, fv } from "../firebase.js";
   import Chatbar from "./chatbar.svelte";
-  import UserMenu from "./userMenu.svelte";
+  import Header from "../components/header.svelte";
 
   let inpMessage = "";
   let selectedUser = "";
   let userSelected;
   let noMessages;
+
   export let name;
 
   let title = "";
@@ -391,19 +392,12 @@
 
 <div class="alert" style="display: none;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">
-    &times;</span
-  >
+    &times;</span>
   <strong> {title} </strong>
   {text}
 </div>
 
 <div class="container">
-  <div class="mHeader">
-    <a href="/" style="text-decoration: none">
-      <img src="./assets/ALGA.svg" alt="logo-svg">
-    </a>
-    <UserMenu bind:name />
-  </div>
   <div class="messaging">
     <Chatbar
         on:sentEvent={renderMessageSent}

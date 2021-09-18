@@ -1,6 +1,7 @@
 <script>
   import { db } from "../firebase";
   import Modal from "./modal.svelte";
+  import Header from "../components/header.svelte";
 
   let question = "";
   let answer = "";
@@ -28,7 +29,7 @@
               showModal = true;
               id = doc.id;
             } else {
-              alertify("Sorry!", "Incorrect email or answer", "#d36868");
+              alertify("Sorry!", "Неправильный пароль или ответ на контрольный вопрос", "#d36868");
             }
           }
         });
@@ -48,6 +49,7 @@
   };
 </script>
 
+<Header />
 <div class="alert" style="display: none;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">
     &times;</span
@@ -59,9 +61,6 @@
   <Modal {id} />
 {/if}
 <div class="container">
-  <a href="/" style="text-decoration: none"
-    ><span class="login-text">MessengeRAZ<span class="dot">.</span></span></a
-  >
   <form class="frm" on:submit|preventDefault={submitHandler}>
     <label class="omrs-input-underlined">
       <span class="omrs-input-label"><strong>Enter your Email:</strong></span>
@@ -83,7 +82,7 @@
       required
     />
     <button class="button"
-      ><span class="buttonText">Recover Acccount</span>
+      ><span class="buttonText">Восстановить аккаунт</span>
       {#if loading}
         <div class="lds-ellipsis">
           <div />
@@ -100,6 +99,12 @@
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+  :root {
+    --primary-color:#F43737;
+    --primary-color-2: #019A47;
+    --primary-color-3: #FFCB00;
+  }
 
   .container {
     font-family: "Ubuntu", sans-serif;
@@ -140,7 +145,7 @@
     width: 100%;
     padding: 15px;
     color: #f7f7f7;
-    background-color: #827ffe;
+    background-color: var(--primary-color-2);
   }
 
   .button:hover {
@@ -165,11 +170,11 @@
     padding: 15px;
     text-align: center;
     color: #f7f7f7;
-    background-color: #68d391;
+    background-color: var(--primary-color-2);
   }
 
   .link:hover {
-    background-color: #38663a;
+    background-color: var(--primary-color-2);
   }
 
   /** BEGIN: Non Openmrs CSS **/

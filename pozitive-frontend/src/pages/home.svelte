@@ -1,6 +1,7 @@
 <script>
 	import { db } from "../firebase.js";
 	import Web from "./web.svelte";
+	import Header from "../components/header.svelte";
 
 	let name;
 	let password = "";
@@ -34,13 +35,15 @@
 				button.style.display = "block";
 
 				if (accNotFound) {
-					errorMessage = "Incorrect username or password.";
+					errorMessage = "Введено неправильное имя пользователя или пароль";
 					const error = document.querySelector(".alert");
 					error.style.display = "block";
 				}
 			});
 	};
 </script>
+
+<Header bind:name />
 
 {#if accNotFound}
 	<div class="alert" style="display: none;">
@@ -50,31 +53,28 @@
 		>
 			&times;</span
 		>
-		<strong>Warning!</strong>
+		<strong>Ошибка.</strong>
 		{errorMessage}
 	</div>
 	<div class="container">
-		<a href="/" style="text-decoration: none">
-			<img src="./assets/ALGA.svg" alt="logo-svg">
-		</a>
 		<form class="frm" on:submit={submitHandler}>
 			<input
 				id="name"
 				type="text"
-				placeholder="Username"
+				placeholder="Имя пользователя"
 				required
 				bind:value={name}
 			/>
 			<input
 				id="password"
 				type="password"
-				placeholder="Password"
+				placeholder="Пароль"
 				required
 				bind:value={password}
 			/>
-			<p class="forget"><a id="a" href="recover">Forgot Password?</a></p>
+			<p class="forget"><a id="a" href="recover">Забыли пароль?</a></p>
 			<button class="button"
-				><span class="buttonText">LOGIN</span>
+				><span class="buttonText">Войти</span>
 				{#if loading}
 					<div class="lds-ellipsis">
 						<div />
@@ -86,7 +86,7 @@
 			</button>
 		</form>
 		<div class="line" />
-		<a class="link" href="signup">Create Account</a>
+		<a class="link" href="signup">Регистрация</a>
 	</div>
 {:else}
 	<Web bind:name />
@@ -94,6 +94,13 @@
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+	:root {
+        --primary-color: #F43737;
+        --primary-color-2: #019A47;
+        --primary-color-3: #FFCB00;
+    }
+
 	.container {
 		font-family: "Ubuntu", sans-serif;
 		margin: 10rem auto;
@@ -113,7 +120,7 @@
 	}
 
 	.dot {
-		color: #F43737;
+		color: var(--primary-color);
 	}
 
 	.forget,
@@ -142,7 +149,7 @@
 	}
 
 	input:required {
-		border-color: #68d391;
+		border-color: var(--primary-color-2);
 	}
 
 	input::placeholder {
@@ -155,18 +162,18 @@
 		padding: 15px;
 		text-align: center;
 		color: #f7f7f7;
-		background-color: #68d391;
+		background-color: var(--primary-color-2);
 	}
 
 	.button {
 		width: 100%;
 		padding: 15px;
 		color: #f7f7f7;
-		background-color: #F43737;
+		background-color: var(--primary-color);
 	}
 
 	.button:hover {
-		background-color: #403866;
+		background-color: rgb(129, 129, 129);
 	}
 
 	a {
@@ -183,7 +190,7 @@
 	}
 
 	.link:hover {
-		background-color: #38663a;
+		background-color: var(--primary-color-2);
 	}
 
 	.alert {
@@ -191,7 +198,7 @@
 		top: 10px;
 		left: 10px;
 		padding: 20px;
-		background-color: #d36868;
+		background-color: var(--primary-color);
 		color: white;
 		width: 350px;
 	}

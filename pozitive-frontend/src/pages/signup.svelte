@@ -1,5 +1,6 @@
 <script>
     import { db, fv } from "../firebase.js";
+    import Header from "../components/header.svelte";
 
     let name = "";
     let email = "";
@@ -17,7 +18,7 @@
         errorHandler("");
 
         if (pswd.length < 5) {
-            errorHandler("Password should be minimum 5 characters");
+            errorHandler("Пароль должен состоять как минимум из пяти символов");
             hasNoError = false;
         }
 
@@ -80,13 +81,13 @@
                     }),
                 })
                 .then(() => {
-                    alertify("Success!", "Account has been created", "#68d391");
+                    alertify("Успешно!", "Аккаунт зарегистрирован", "#68d391");
                 });
 
             clearForm();
         } else {
             clearForm();
-            alertify("Something went wrong!", "Try again", "#d36868");
+            alertify("Что-то пошло не так!", "Попробуйте еще раз", "#d36868");
         }
     };
 
@@ -158,7 +159,7 @@
         // restrict spaces and special characters in username
         var patt = /[^\w]/g;
         if (patt.test(name)) {
-            errorHandler("Username can't have spaces or some characters");
+            errorHandler("Имя пользователя содержит недопустимые символы");
             hasNoError = false;
         }
 
@@ -167,13 +168,13 @@
             .then((snapshot) => {
                 snapshot.docs.forEach((doc) => {
                     if (doc.data().username == val) {
-                        errorHandler("Username taken");
+                        errorHandler("Имя пользователя уже используется");
                         hasNoError = false;
                     }
 
                     if (doc.data().email == val) {
                         errorHandler(
-                            "Account already registered. Try logging in"
+                            "Аккаунт уже зарегистрирован"
                         );
                         hasNoError = false;
                     }
@@ -182,6 +183,7 @@
     };
 </script>
 
+<Header bind:name />
 <div class="alert" style="display: none;">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">
         &times;</span
@@ -190,19 +192,17 @@
     {text}
 </div>
 <div class="container">
-    <a href="/" style="text-decoration: none"><img src="./assets/ALGA.svg" alt="logo-svg">
-    </a>
     <form
         id="frm"
         on:submit|preventDefault={pswd == cpswd
             ? submitHandler
-            : () => errorHandler("Password does not match")}
+            : () => errorHandler("Пароли не совпадают")}
     >
         <input
             id="name"
             name="name"
             type="text"
-            placeholder="Username"
+            placeholder="Имя пользователя"
             on:keyup={usernameCheck(name)}
             bind:value={name}
             required
@@ -220,7 +220,7 @@
             id="password"
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="Пароль"
             bind:value={pswd}
             required
         />
@@ -228,7 +228,7 @@
             id="cpassword"
             name="cpassword"
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Подтвердите пароль"
             bind:value={cpswd}
             required
         />
@@ -240,32 +240,38 @@
         <input
             id="pet"
             type="text"
-            placeholder="Your Pet's name"
+            placeholder="Имя первого домашнего животного"
             bind:value={pet}
             required
         />
         <input
             id="birthplace"
             type="text"
-            placeholder="Your birthplace"
+            placeholder="Место рождения"
             bind:value={birthplace}
             required
         />
         <input
             id="food"
             type="text"
-            placeholder="Your favorite food"
+            placeholder="Любимое блюдо"
             bind:value={food}
             required
         />
-        <p class="skip"><a id="a" href="/">Skip this step</a></p>
-        <button class="button button2">Create Account</button>
+        <p class="skip"><a id="a" href="/">Пропустить</a></p>
+        <button class="button button2">Регистрация</button>
     </form>
     <div class="line" />
-    <a class="link" id="a" href="/">LOGIN</a>
+    <a class="link" id="a" href="/">Вход</a>
 </div>
 
 <style>
+    :root {
+        --primary-color: #F43737;
+        --primary-color-2: #019A47;
+        --primary-color-3: #FFCB00;
+    }
+
     .container {
         font-family: "Ubuntu", sans-serif;
         margin: 5rem auto;
@@ -318,19 +324,19 @@
         padding: 15px;
         text-align: center;
         color: #f7f7f7;
-        background-color: #827ffe;
+        background-color: var(--primary-color);
     }
 
     .button {
         width: 100%;
         padding: 15px;
         color: #f7f7f7;
-        background-color: #827ffe;
+        background-color: var(--primary-color);
     }
 
     .button:hover,
     .link:hover {
-        background-color: #403866;
+        background-color: var(--primary-color-2);
     }
 
     .line {
@@ -342,12 +348,12 @@
     }
 
     .button2 {
-        background-color: #68d391;
+        background-color: var(--primary-color-2);
         margin-top: 10px;
     }
 
     .button2:hover {
-        background-color: #38663a;
+        background-color: var(--primary-color-2);
     }
 
     .alert {
