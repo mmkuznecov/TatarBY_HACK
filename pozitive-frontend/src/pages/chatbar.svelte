@@ -9,7 +9,6 @@
   let recent_chats = [];
   export let selectedUser;
   export let userSelected;
-  let dev = "raz0229";
   export let noMessages;
   export let name;
   let fetchedIds = [];
@@ -94,10 +93,9 @@
 
     let i = 0;
     for (i in e.path) {
-      if (
-        e.path[i].className == `chat_list ${svelteClass}` ||
-        e.path[i].className == `chat_list ${svelteClass} dev_chat`
-      ) {
+      if (e.path[i].className == `chat_list ${svelteClass}` ||
+          e.path[i].className == `chat_list ${svelteClass} dev_chat`) 
+      {
         e.path[i].setAttribute("class", `chat_list active_chat ${svelteClass}`);
         selectedUser = e.path[i].innerText.split(/(\s+)/)[0]; //gets username
       }
@@ -222,11 +220,10 @@
       {#each recent_chats as account}
         <div
           class="chat_list"
-          class:dev_chat={dev == account.name}
           on:click={selectActive}
         >
           <div class="chat_people">
-            <div class="chat_ib">
+            <div class="chat_ib" lass="chat_list" on:click={selectActive}>
               <h5>
                 {account.name}
                 <span class="chat_date"> {account.time} </span>
@@ -261,13 +258,11 @@
     display: block;
     background: #e5e5ff none repeat scroll 0 0;
     float: left;
+    width: 50%;
     overflow: hidden;
     transition: all 0.5s ease 0s;
-    width: 60%;
     border-right: 1px solid #c4c4c4;
-    height: 80vh;
-    animation: blink 1.5s infinite 100ms;
-    animation-iteration-count: 1;
+    height: 100vh;
   }
 
   @keyframes blink {

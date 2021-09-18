@@ -25,7 +25,7 @@
       <div class="card">
         <img src="https://i.ibb.co/qjMY3ky/raz0229.png" alt="raz0229" style="width:100%">
         <div class="container">
-          <h2>raz0229</h2>
+          <h2>ALGA</h2>
           <p class="title">Full-Stack Developer</p>
           <p>I have no life...</p>
           <p>raja.zafar229@gmail.com</p>

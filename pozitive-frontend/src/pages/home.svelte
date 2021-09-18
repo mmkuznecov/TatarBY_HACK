@@ -54,11 +54,9 @@
 		{errorMessage}
 	</div>
 	<div class="container">
-		<a href="/" style="text-decoration: none"
-			><span class="login-text"
-				>MessengeRAZ<span class="dot">.</span></span
-			></a
-		>
+		<a href="/" style="text-decoration: none">
+			<img src="./assets/ALGA.svg" alt="logo-svg">
+		</a>
 		<form class="frm" on:submit={submitHandler}>
 			<input
 				id="name"
@@ -115,7 +113,7 @@
 	}
 
 	.dot {
-		color: #827ffe;
+		color: #F43737;
 	}
 
 	.forget,
@@ -125,7 +123,7 @@
 		font-size: 16px;
 		text-decoration: none;
 		text-align: center;
-		color: #827ffe;
+		color: #F43737;
 	}
 
 	#a:hover {
@@ -164,7 +162,7 @@
 		width: 100%;
 		padding: 15px;
 		color: #f7f7f7;
-		background-color: #827ffe;
+		background-color: #F43737;
 	}
 
 	.button:hover {

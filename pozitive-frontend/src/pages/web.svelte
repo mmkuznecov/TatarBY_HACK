@@ -399,51 +399,13 @@
 
 <div class="container">
   <div class="mHeader">
-    <button id="menu-button" on:click={showPanel}
-      ><svg
-        id="menu-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
-        viewBox="0 0 50 50"
-        ><defs
-          ><style>
-            .cls-1 {
-              fill: #111;
-            }
-            .cls-2 {
-              fill: #827ffe;
-            }
-          </style></defs
-        ><title>Menu</title><g id="Layer_2" data-name="Layer 2"
-          ><g id="Menu"
-            ><path
-              class="cls-1"
-              d="M41.92 0H8.08A8.08 8.08 0 0 0 0 8.08v33.84A8.08 8.08 0 0 0 8.08 50h33.84A8.08 8.08 0 0 0 50 41.92V8.08A8.08 8.08 0 0 0 41.92 0zM45 41.92A3.08 3.08 0 0 1 41.92 45H8.08A3.08 3.08 0 0 1 5 41.92V8.08A3.08 3.08 0 0 1 8.08 5h33.84A3.08 3.08 0 0 1 45 8.08z"
-            /><path
-              class="cls-1"
-              d="M37.5 12h-25a2.5 2.5 0 0 0 0 5h25a2.5 2.5 0 0 0 0-5zM37.5 23h-25a2.5 2.5 0 0 0 0 5h25a2.5 2.5 0 0 0 0-5z"
-            /><rect
-              class="cls-2"
-              x="10"
-              y="34"
-              width="26"
-              height="5"
-              rx="2.5"
-              ry="2.5"
-            /></g
-          ></g
-        ></svg
-      ></button
-    >
     <a href="/" style="text-decoration: none">
-      <span class="login-text">MessengeRAZ<span class="dot">.</span></span>
+      <img src="./assets/ALGA.svg" alt="logo-svg">
     </a>
     <UserMenu bind:name />
   </div>
   <div class="messaging">
-    <div class="inbox_msg">
-      <Chatbar
+    <Chatbar
         on:sentEvent={renderMessageSent}
         on:receivedEvent={renderMessageReceived}
         bind:selectedUser
@@ -451,6 +413,7 @@
         bind:userSelected
         bind:name
       />
+    <div class="inbox_msg">
       <div class="mesgs">
         <div id="data" class="msg_history">
           <img
@@ -620,8 +583,7 @@
 
   .mesgs {
     background: #fff;
-    padding: 30px 15px 0 25px;
-    width: 100%;
+    padding: 0;
   }
 
   .centerImage {
@@ -696,7 +658,6 @@
     color: #4c4c4c;
     font-size: 15px;
     min-height: 48px;
-    min-width: 60%;
     max-width: 60%;
     transition: all 0.6s ease 0s;
   }
@@ -737,7 +698,8 @@
   }
 
   .messaging {
-    padding: 0 0 50px 0;
+    padding: 0;
+    display: flex;
   }
   .msg_history {
     height: 80vh;

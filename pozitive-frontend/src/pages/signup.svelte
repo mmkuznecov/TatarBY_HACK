@@ -24,12 +24,12 @@
         if (hasNoError) {
             const usersRef = db
                 .collection("messages")
-                .doc(name.toLowerCase() + "-" + "raz0229");
+                .doc(name.toLowerCase() + "-" + "ALGA");
             const usersRef2 = db
                 .collection("messages")
-                .doc("raz0229" + "-" + name.toLowerCase());
+                .doc("ALGA" + "-" + name.toLowerCase());
             const mesg =
-                "Hi! :) Welcome to MessengeRAZ. This is RAZ (Developer of MessengeRAZ). You can use this chat to report bugs or give feedback. Over!";
+                "Привет! :) Добро пожаловать в ALGA. Это сервис для изучения татарского языка. Здесь ты можешь общаться с технической поддержкой)";
 
             db.collection("accounts").add({
                 username: name.toLowerCase(),
@@ -44,15 +44,15 @@
                 .doc(name.toLowerCase())
                 .set({
                     recent_chats: fv.arrayUnion({
-                        name: "raz0229",
+                        name: "ALGA",
                         time: new Date().toDateString().substring(4, 10),
-                        msg: "Hi! Welcome to MessengeRAZ. This...",
+                        msg: "Привет! Добро пожаловать в ALGA...",
                         notSeen: true,
                     }),
                 });
 
             db.collection("messages")
-                .doc("raz0229")
+                .doc("ALGA")
                 .update({
                     recent_chats: fv.arrayUnion({
                         name: name.toLowerCase(),
@@ -63,7 +63,7 @@
                 });
 
             usersRef.set({
-                raz0229: fv.arrayUnion({
+                ALGA: fv.arrayUnion({
                     id: makeid(),
                     time: formatAMPM(new Date()),
                     msg: mesg,
@@ -190,10 +190,8 @@
     {text}
 </div>
 <div class="container">
-    <a href="/" style="text-decoration: none"
-        ><span class="login-text">MessengeRAZ<span class="dot">.</span></span
-        ></a
-    >
+    <a href="/" style="text-decoration: none"><img src="./assets/ALGA.svg" alt="logo-svg">
+    </a>
     <form
         id="frm"
         on:submit|preventDefault={pswd == cpswd
