@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public -s",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -18,6 +19,11 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
+    "alertify": "*",
+    "ejs": "*",
+    "express": "*",
+    "firebase": "*",
+    "sirv-cli": "^1.0.0",
+    "svelte-routing": "*"
   }
 }
