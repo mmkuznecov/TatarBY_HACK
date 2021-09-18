@@ -517,56 +517,10 @@
     transition-property: all;
   }
 
-  #menu-button {
-    width: 40px;
-    height: 40px;
-    float: right;
-    margin-right: 5px;
-    border: none;
-    color: #000;
-    background-color: rgba(161, 154, 154, 0.1);
-    border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-  }
-
-  #menu-button:hover,
-  #menu-button:focus {
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    transform: translateY(-7px);
-  }
-
-  #menu-button > svg {
-    width: 30px;
-    height: 30px;
-  }
-
   .inbox_msg {
     border-top: 1px solid #c4c4c4;
     clear: both;
     overflow: hidden;
-  }
-
-  .mHeader {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .login-text {
-    display: table-caption;
-    margin-top: 5px;
-    font-size: 30px;
-    font-family: "Ubuntu";
-    color: #2e2e2e;
-    line-height: 1.2;
-    text-transform: uppercase;
-    width: 100%;
-  }
-
-  .dot {
-    color: #827ffe;
   }
 
   .time_date_2 {

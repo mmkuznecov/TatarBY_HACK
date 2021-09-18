@@ -126,21 +126,6 @@
     border: none;
   }
 
-  .login-text {
-    font-size: 30px;
-    color: #2e2e2e;
-    line-height: 1.2;
-    margin-bottom: 10%;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    display: block;
-  }
-
-  .dot {
-    color: #827ffe;
-  }
-
   .button {
     width: 100%;
     padding: 15px;

@@ -19,15 +19,15 @@
             .doc(doc.id)
             .delete()
             .then(() => {
-              alertify("Success!", "Account has been deleted", "#68d391");
+              alertify("Успешно!", "Аккаунт удален", "#68d391");
               setTimeout(() => {
                 location.replace("/");
               }, 2000);
             })
             .catch((error) => {
               alertify(
-                "Something went wrong!",
-                "Account not deleted",
+                "Что-то пошло не так.",
+                "Аккаунт удален",
                 "#d36868"
               );
             });

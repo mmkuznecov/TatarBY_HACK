@@ -6,6 +6,7 @@
   		import Recover from './pages/recover.svelte';
 		import About from './pages/about.svelte';
 		import NotFound from './pages/404.svelte';
+		import EduApp from './pages/eduApp.svelte'
   
  		export let url = "";
 </script>
@@ -18,6 +19,7 @@
 	   <Route path="/"><Home /></Route>
 	   <Route path="about" component={About}/>
 	   <Route component="{NotFound}" />
+	   <Route path="education" component={EduApp} />
 	 </div>
 	</Router>
 
