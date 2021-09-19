@@ -29,25 +29,46 @@
   </div>
 </header>
 
+<div class="main">
 <button on:click={onClickOutside}>
-                {#if isClicked == false}
-                    <div class="main-block">
-                        <h2>Татар телен
-                            өйрәнү өчен
-                            мәктәп</h2>
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                        <img class="to-russian-img" src="./assets/clik2.png" />
-                        <p>Наводите на текст, чтобы переводить его на русский</p>
-                    </div>
-                {:else}
-                    <div class="main-block">
-                        <h2>Обучение татарскому языку</h2>
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                        <img class="to-russian-img" src="./assets/clik2.png" />
-                        <p>Наводите на текст, чтобы переводить его на русский</p>
-                    </div>
-                {/if}   
+    {#if isClicked == false}
+        <div class="main-block">
+            <h2>Татар телен
+                өйрәнү өчен
+                мәктәп</h2>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <img class="to-russian-img" src="./assets/clik2.png" />
+            <p>Наводите на текст, чтобы переводить его на русский</p>
+        </div>
+    {:else}
+        <div class="main-block">
+            <h2>Обучение татарскому языку</h2>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <img class="to-russian-img" src="./assets/clik2.png" />
+            <p>Наводите на текст, чтобы переводить его на русский</p>
+        </div>
+    {/if}   
 </button>
+<button on:click={onClickOutside}>
+    <div class="reg-class">
+        {#if isClicked == false}
+            <div class="reg-block">
+                <h2>Жәмгыятькә кушыл</h2>
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <img class="to-russian-img" src="./assets/button.svg" />
+                <img class="reg-img" src="./assets/img.png" />
+            </div>
+        {:else}
+            <div class="reg-block">
+                <h2>Присоединиться к сообществу</h2>
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <img class="to-russian-img" src="./assets/button.svg" />
+                <img class="reg-img" src="./assets/img.png" />
+            </div>
+        {/if}   
+    </div>
+</button>
+</div>
 
 <style>
     button {
@@ -59,6 +80,28 @@
         /* отображаем курсор в виде руки при наведении; некоторые
         считают, что необходимо оставлять стрелочный вид для кнопок */
         cursor: pointer;
+        margin: 0;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reg-class {
+        border-top: 2px solid #181818;
+        border-bottom: 2px solid #181818;
+        width: 100%;
+    }
+
+    .reg-img {
+        border-left: 2px solid #181818;
+        border-right: 2px solid #181818;
+        margin-left: 20%;
+    }
+
+    .reg-class h2 {
+        font-size: 44px;
     }
 
     .to-russian-img {
@@ -82,11 +125,16 @@
     .main-block {
         display: flex;
         align-items: center;
-        border-bottom: 2px solid #181818;
         padding-bottom: 40px;
+        width: 80%;
         border-right: 2px solid #181818;
     }
-    
+
+    .reg-block {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 
     h2 {
         color: #181818;

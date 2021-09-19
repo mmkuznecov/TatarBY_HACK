@@ -1353,7 +1353,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_1$5, create_else_block$3];
+    	const if_block_creators = [create_if_block_1$6, create_else_block$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -1484,7 +1484,7 @@ var app = (function () {
     }
 
     // (41:2) {#if component !== null}
-    function create_if_block_1$5(ctx) {
+    function create_if_block_1$6(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -1581,7 +1581,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$5.name,
+    		id: create_if_block_1$6.name,
     		type: "if",
     		source: "(41:2) {#if component !== null}",
     		ctx
@@ -23898,7 +23898,7 @@ var app = (function () {
     }
 
     // (230:16) {#if account.notSeen}
-    function create_if_block_1$4(ctx) {
+    function create_if_block_1$5(ctx) {
     	let span;
     	let t;
 
@@ -23932,7 +23932,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$4.name,
+    		id: create_if_block_1$5.name,
     		type: "if",
     		source: "(230:16) {#if account.notSeen}",
     		ctx
@@ -23961,7 +23961,7 @@ var app = (function () {
     	let t6;
     	let mounted;
     	let dispose;
-    	let if_block = /*account*/ ctx[19].notSeen && create_if_block_1$4(ctx);
+    	let if_block = /*account*/ ctx[19].notSeen && create_if_block_1$5(ctx);
 
     	const block = {
     		c: function create() {
@@ -24056,7 +24056,7 @@ var app = (function () {
 
     			if (/*account*/ ctx[19].notSeen) {
     				if (if_block) ; else {
-    					if_block = create_if_block_1$4(ctx);
+    					if_block = create_if_block_1$5(ctx);
     					if_block.c();
     					if_block.m(h5, null);
     				}
@@ -24684,7 +24684,7 @@ var app = (function () {
     const file$c = "src\\components\\userMenu.svelte";
 
     // (83:0) {#if showUserMenu}
-    function create_if_block_1$3(ctx) {
+    function create_if_block_1$4(ctx) {
     	let div;
     	let a0;
     	let svg0;
@@ -24961,7 +24961,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$3.name,
+    		id: create_if_block_1$4.name,
     		type: "if",
     		source: "(83:0) {#if showUserMenu}",
     		ctx
@@ -25271,7 +25271,7 @@ var app = (function () {
     	let if_block1_anchor;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*showUserMenu*/ ctx[1] && create_if_block_1$3(ctx);
+    	let if_block0 = /*showUserMenu*/ ctx[1] && create_if_block_1$4(ctx);
     	let if_block1 = /*showModal*/ ctx[2] && create_if_block$5(ctx);
 
     	const block = {
@@ -25420,7 +25420,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_1$3(ctx);
+    					if_block0 = create_if_block_1$4(ctx);
     					if_block0.c();
     					if_block0.m(t9.parentNode, t9);
     				}
@@ -26038,7 +26038,7 @@ var app = (function () {
     }
 
     // (427:10) {#if userSelected}
-    function create_if_block_1$2(ctx) {
+    function create_if_block_1$3(ctx) {
     	let div;
     	let t;
 
@@ -26070,7 +26070,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$2.name,
+    		id: create_if_block_1$3.name,
     		type: "if",
     		source: "(427:10) {#if userSelected}",
     		ctx
@@ -26221,7 +26221,7 @@ var app = (function () {
     	chatbar.$on("sentEvent", /*renderMessageSent*/ ctx[8]);
     	chatbar.$on("receivedEvent", /*renderMessageReceived*/ ctx[9]);
     	let if_block0 = /*noMessages*/ ctx[4] && create_if_block_2(ctx);
-    	let if_block1 = /*userSelected*/ ctx[3] && create_if_block_1$2(ctx);
+    	let if_block1 = /*userSelected*/ ctx[3] && create_if_block_1$3(ctx);
     	let if_block2 = /*selectedUser*/ ctx[2] != "" && create_if_block$3(ctx);
 
     	const block = {
@@ -26518,7 +26518,7 @@ var app = (function () {
 
     			if (/*userSelected*/ ctx[3]) {
     				if (if_block1) ; else {
-    					if_block1 = create_if_block_1$2(ctx);
+    					if_block1 = create_if_block_1$3(ctx);
     					if_block1.c();
     					if_block1.m(div5, t9);
     				}
@@ -27154,7 +27154,7 @@ var app = (function () {
     	let div3;
     	let mounted;
     	let dispose;
-    	let if_block = /*loading*/ ctx[2] && create_if_block_1$1(ctx);
+    	let if_block = /*loading*/ ctx[2] && create_if_block_1$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -27353,7 +27353,7 @@ var app = (function () {
 
     			if (/*loading*/ ctx[2]) {
     				if (if_block) ; else {
-    					if_block = create_if_block_1$1(ctx);
+    					if_block = create_if_block_1$2(ctx);
     					if_block.c();
     					if_block.m(button, null);
     				}
@@ -27388,7 +27388,7 @@ var app = (function () {
     }
 
     // (79:5) {#if loading}
-    function create_if_block_1$1(ctx) {
+    function create_if_block_1$2(ctx) {
     	let div4;
     	let div0;
     	let t0;
@@ -27456,7 +27456,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_1$2.name,
     		type: "if",
     		source: "(79:5) {#if loading}",
     		ctx
@@ -28654,7 +28654,7 @@ var app = (function () {
     const file$6 = "src\\pages\\recover.svelte";
 
     // (60:0) {#if showModal}
-    function create_if_block_1(ctx) {
+    function create_if_block_1$1(ctx) {
     	let modal;
     	let current;
 
@@ -28695,7 +28695,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1.name,
+    		id: create_if_block_1$1.name,
     		type: "if",
     		source: "(60:0) {#if showModal}",
     		ctx
@@ -28830,7 +28830,7 @@ var app = (function () {
     	let mounted;
     	let dispose;
     	header = new Header({ $$inline: true });
-    	let if_block0 = /*showModal*/ ctx[3] && create_if_block_1(ctx);
+    	let if_block0 = /*showModal*/ ctx[3] && create_if_block_1$1(ctx);
     	let if_block1 = /*loading*/ ctx[4] && create_if_block$1(ctx);
 
     	const block = {
@@ -29111,7 +29111,7 @@ var app = (function () {
     						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block0 = create_if_block_1(ctx);
+    					if_block0 = create_if_block_1$1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
     					if_block0.m(t7.parentNode, t7);
@@ -30290,8 +30290,8 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$1 = "src\\pages\\main.svelte";
 
-    // (42:16) {:else}
-    function create_else_block(ctx) {
+    // (43:4) {:else}
+    function create_else_block_1(ctx) {
     	let div;
     	let h2;
     	let t0;
@@ -30332,15 +30332,15 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h2, "class", "svelte-tlmcwo");
-    			add_location(h2, file$1, 43, 24, 1409);
-    			attr_dev(img, "class", "to-russian-img svelte-tlmcwo");
+    			attr_dev(h2, "class", "svelte-1hluao1");
+    			add_location(h2, file$1, 44, 12, 1285);
+    			attr_dev(img, "class", "to-russian-img svelte-1hluao1");
     			if (img.src !== (img_src_value = "./assets/clik2.png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$1, 45, 24, 1540);
-    			attr_dev(p, "class", "svelte-tlmcwo");
-    			add_location(p, file$1, 46, 24, 1621);
-    			attr_dev(div, "class", "main-block svelte-tlmcwo");
-    			add_location(div, file$1, 42, 20, 1359);
+    			add_location(img, file$1, 46, 12, 1392);
+    			attr_dev(p, "class", "svelte-1hluao1");
+    			add_location(p, file$1, 47, 12, 1461);
+    			attr_dev(div, "class", "main-block svelte-1hluao1");
+    			add_location(div, file$1, 43, 8, 1247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30359,17 +30359,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block_1.name,
     		type: "else",
-    		source: "(42:16) {:else}",
+    		source: "(43:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:16) {#if isClicked == false}
-    function create_if_block(ctx) {
+    // (34:4) {#if isClicked == false}
+    function create_if_block_1(ctx) {
     	let div;
     	let h2;
     	let t0;
@@ -30384,7 +30384,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			h2 = element("h2");
-    			t0 = text("Татар телен\r\n                            өйрәнү өчен\r\n                            мәктәп");
+    			t0 = text("Татар телен\r\n                өйрәнү өчен\r\n                мәктәп");
     			t1 = space();
     			img = element("img");
     			t2 = space();
@@ -30397,7 +30397,7 @@ var app = (function () {
     			var div_nodes = children(div);
     			h2 = claim_element(div_nodes, "H2", { class: true });
     			var h2_nodes = children(h2);
-    			t0 = claim_text(h2_nodes, "Татар телен\r\n                            өйрәнү өчен\r\n                            мәктәп");
+    			t0 = claim_text(h2_nodes, "Татар телен\r\n                өйрәнү өчен\r\n                мәктәп");
     			h2_nodes.forEach(detach_dev);
     			t1 = claim_space(div_nodes);
     			img = claim_element(div_nodes, "IMG", { class: true, src: true });
@@ -30410,15 +30410,15 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h2, "class", "svelte-tlmcwo");
-    			add_location(h2, file$1, 34, 24, 952);
-    			attr_dev(img, "class", "to-russian-img svelte-tlmcwo");
+    			attr_dev(h2, "class", "svelte-1hluao1");
+    			add_location(h2, file$1, 35, 12, 936);
+    			attr_dev(img, "class", "to-russian-img svelte-1hluao1");
     			if (img.src !== (img_src_value = "./assets/clik2.png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$1, 38, 24, 1146);
-    			attr_dev(p, "class", "svelte-tlmcwo");
-    			add_location(p, file$1, 39, 24, 1227);
-    			attr_dev(div, "class", "main-block svelte-tlmcwo");
-    			add_location(div, file$1, 33, 20, 902);
+    			add_location(img, file$1, 39, 12, 1082);
+    			attr_dev(p, "class", "svelte-1hluao1");
+    			add_location(p, file$1, 40, 12, 1151);
+    			attr_dev(div, "class", "main-block svelte-1hluao1");
+    			add_location(div, file$1, 34, 8, 898);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -30437,9 +30437,157 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(34:4) {#if isClicked == false}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (61:8) {:else}
+    function create_else_block(ctx) {
+    	let div;
+    	let h2;
+    	let t0;
+    	let t1;
+    	let img0;
+    	let img0_src_value;
+    	let t2;
+    	let img1;
+    	let img1_src_value;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h2 = element("h2");
+    			t0 = text("Присоединиться к сообществу");
+    			t1 = space();
+    			img0 = element("img");
+    			t2 = space();
+    			img1 = element("img");
+    			this.h();
+    		},
+    		l: function claim(nodes) {
+    			div = claim_element(nodes, "DIV", { class: true });
+    			var div_nodes = children(div);
+    			h2 = claim_element(div_nodes, "H2", { class: true });
+    			var h2_nodes = children(h2);
+    			t0 = claim_text(h2_nodes, "Присоединиться к сообществу");
+    			h2_nodes.forEach(detach_dev);
+    			t1 = claim_space(div_nodes);
+    			img0 = claim_element(div_nodes, "IMG", { class: true, src: true });
+    			t2 = claim_space(div_nodes);
+    			img1 = claim_element(div_nodes, "IMG", { class: true, src: true });
+    			div_nodes.forEach(detach_dev);
+    			this.h();
+    		},
+    		h: function hydrate() {
+    			attr_dev(h2, "class", "svelte-1hluao1");
+    			add_location(h2, file$1, 62, 16, 2031);
+    			attr_dev(img0, "class", "to-russian-img svelte-1hluao1");
+    			if (img0.src !== (img0_src_value = "./assets/button.svg")) attr_dev(img0, "src", img0_src_value);
+    			add_location(img0, file$1, 64, 16, 2148);
+    			attr_dev(img1, "class", "reg-img svelte-1hluao1");
+    			if (img1.src !== (img1_src_value = "./assets/img.png")) attr_dev(img1, "src", img1_src_value);
+    			add_location(img1, file$1, 65, 16, 2222);
+    			attr_dev(div, "class", "reg-block svelte-1hluao1");
+    			add_location(div, file$1, 61, 12, 1990);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h2);
+    			append_dev(h2, t0);
+    			append_dev(div, t1);
+    			append_dev(div, img0);
+    			append_dev(div, t2);
+    			append_dev(div, img1);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(61:8) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (54:8) {#if isClicked == false}
+    function create_if_block(ctx) {
+    	let div;
+    	let h2;
+    	let t0;
+    	let t1;
+    	let img0;
+    	let img0_src_value;
+    	let t2;
+    	let img1;
+    	let img1_src_value;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h2 = element("h2");
+    			t0 = text("Жәмгыятькә кушыл");
+    			t1 = space();
+    			img0 = element("img");
+    			t2 = space();
+    			img1 = element("img");
+    			this.h();
+    		},
+    		l: function claim(nodes) {
+    			div = claim_element(nodes, "DIV", { class: true });
+    			var div_nodes = children(div);
+    			h2 = claim_element(div_nodes, "H2", { class: true });
+    			var h2_nodes = children(h2);
+    			t0 = claim_text(h2_nodes, "Жәмгыятькә кушыл");
+    			h2_nodes.forEach(detach_dev);
+    			t1 = claim_space(div_nodes);
+    			img0 = claim_element(div_nodes, "IMG", { class: true, src: true });
+    			t2 = claim_space(div_nodes);
+    			img1 = claim_element(div_nodes, "IMG", { class: true, src: true });
+    			div_nodes.forEach(detach_dev);
+    			this.h();
+    		},
+    		h: function hydrate() {
+    			attr_dev(h2, "class", "svelte-1hluao1");
+    			add_location(h2, file$1, 55, 16, 1713);
+    			attr_dev(img0, "class", "to-russian-img svelte-1hluao1");
+    			if (img0.src !== (img0_src_value = "./assets/button.svg")) attr_dev(img0, "src", img0_src_value);
+    			add_location(img0, file$1, 57, 16, 1819);
+    			attr_dev(img1, "class", "reg-img svelte-1hluao1");
+    			if (img1.src !== (img1_src_value = "./assets/img.png")) attr_dev(img1, "src", img1_src_value);
+    			add_location(img1, file$1, 58, 16, 1893);
+    			attr_dev(div, "class", "reg-block svelte-1hluao1");
+    			add_location(div, file$1, 54, 12, 1672);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h2);
+    			append_dev(h2, t0);
+    			append_dev(div, t1);
+    			append_dev(div, img0);
+    			append_dev(div, t2);
+    			append_dev(div, img1);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(33:16) {#if isClicked == false}",
+    		source: "(54:8) {#if isClicked == false}",
     		ctx
     	});
 
@@ -30460,17 +30608,29 @@ var app = (function () {
     	let div1;
     	let t3;
     	let t4;
-    	let button;
+    	let div4;
+    	let button0;
+    	let t5;
+    	let button1;
+    	let div3;
     	let mounted;
     	let dispose;
 
     	function select_block_type(ctx, dirty) {
+    		if (/*isClicked*/ ctx[0] == false) return create_if_block_1;
+    		return create_else_block_1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block0 = current_block_type(ctx);
+
+    	function select_block_type_1(ctx, dirty) {
     		if (/*isClicked*/ ctx[0] == false) return create_if_block;
     		return create_else_block;
     	}
 
-    	let current_block_type = select_block_type(ctx);
-    	let if_block = current_block_type(ctx);
+    	let current_block_type_1 = select_block_type_1(ctx);
+    	let if_block1 = current_block_type_1(ctx);
 
     	const block = {
     		c: function create() {
@@ -30486,8 +30646,13 @@ var app = (function () {
     			div1 = element("div");
     			t3 = text("Туган телне кадерләгән халык кадерле булыр Туган телне кадерләгән халык кадерле булыр");
     			t4 = space();
-    			button = element("button");
-    			if_block.c();
+    			div4 = element("div");
+    			button0 = element("button");
+    			if_block0.c();
+    			t5 = space();
+    			button1 = element("button");
+    			div3 = element("div");
+    			if_block1.c();
     			this.h();
     		},
     		l: function claim(nodes) {
@@ -30515,10 +30680,21 @@ var app = (function () {
     			div2_nodes.forEach(detach_dev);
     			header_nodes.forEach(detach_dev);
     			t4 = claim_space(nodes);
-    			button = claim_element(nodes, "BUTTON", { class: true });
-    			var button_nodes = children(button);
-    			if_block.l(button_nodes);
-    			button_nodes.forEach(detach_dev);
+    			div4 = claim_element(nodes, "DIV", { class: true });
+    			var div4_nodes = children(div4);
+    			button0 = claim_element(div4_nodes, "BUTTON", { class: true });
+    			var button0_nodes = children(button0);
+    			if_block0.l(button0_nodes);
+    			button0_nodes.forEach(detach_dev);
+    			t5 = claim_space(div4_nodes);
+    			button1 = claim_element(div4_nodes, "BUTTON", { class: true });
+    			var button1_nodes = children(button1);
+    			div3 = claim_element(button1_nodes, "DIV", { class: true });
+    			var div3_nodes = children(div3);
+    			if_block1.l(div3_nodes);
+    			div3_nodes.forEach(detach_dev);
+    			button1_nodes.forEach(detach_dev);
+    			div4_nodes.forEach(detach_dev);
     			this.h();
     		},
     		h: function hydrate() {
@@ -30529,19 +30705,25 @@ var app = (function () {
     			set_style(a0, "text-decoration", "none");
     			add_location(a0, file$1, 19, 8, 407);
     			attr_dev(a1, "href", "/");
-    			attr_dev(a1, "class", "header-button svelte-tlmcwo");
+    			attr_dev(a1, "class", "header-button svelte-1hluao1");
     			set_style(a1, "text-decoration", "none");
     			add_location(a1, file$1, 23, 8, 536);
-    			attr_dev(div0, "class", "header svelte-tlmcwo");
+    			attr_dev(div0, "class", "header svelte-1hluao1");
     			add_location(div0, file$1, 18, 4, 377);
-    			attr_dev(div1, "class", "b-marquee__text svelte-tlmcwo");
+    			attr_dev(div1, "class", "b-marquee__text svelte-1hluao1");
     			add_location(div1, file$1, 27, 4, 659);
-    			attr_dev(div2, "class", "b-marquee svelte-tlmcwo");
+    			attr_dev(div2, "class", "b-marquee svelte-1hluao1");
     			add_location(div2, file$1, 26, 3, 630);
-    			attr_dev(header, "class", "svelte-tlmcwo");
+    			attr_dev(header, "class", "svelte-1hluao1");
     			add_location(header, file$1, 16, 0, 357);
-    			attr_dev(button, "class", "svelte-tlmcwo");
-    			add_location(button, file$1, 31, 0, 804);
+    			attr_dev(button0, "class", "svelte-1hluao1");
+    			add_location(button0, file$1, 32, 0, 824);
+    			attr_dev(div3, "class", "reg-class svelte-1hluao1");
+    			add_location(div3, file$1, 52, 4, 1601);
+    			attr_dev(button1, "class", "svelte-1hluao1");
+    			add_location(button1, file$1, 51, 0, 1561);
+    			attr_dev(div4, "class", "main svelte-1hluao1");
+    			add_location(div4, file$1, 31, 0, 804);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -30556,22 +30738,41 @@ var app = (function () {
     			append_dev(div2, div1);
     			append_dev(div1, t3);
     			insert_dev(target, t4, anchor);
-    			insert_dev(target, button, anchor);
-    			if_block.m(button, null);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, button0);
+    			if_block0.m(button0, null);
+    			append_dev(div4, t5);
+    			append_dev(div4, button1);
+    			append_dev(button1, div3);
+    			if_block1.m(div3, null);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*onClickOutside*/ ctx[1], false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", /*onClickOutside*/ ctx[1], false, false, false),
+    					listen_dev(button1, "click", /*onClickOutside*/ ctx[1], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
-    				if_block.d(1);
-    				if_block = current_block_type(ctx);
+    				if_block0.d(1);
+    				if_block0 = current_block_type(ctx);
 
-    				if (if_block) {
-    					if_block.c();
-    					if_block.m(button, null);
+    				if (if_block0) {
+    					if_block0.c();
+    					if_block0.m(button0, null);
+    				}
+    			}
+
+    			if (current_block_type_1 !== (current_block_type_1 = select_block_type_1(ctx))) {
+    				if_block1.d(1);
+    				if_block1 = current_block_type_1(ctx);
+
+    				if (if_block1) {
+    					if_block1.c();
+    					if_block1.m(div3, null);
     				}
     			}
     		},
@@ -30580,10 +30781,11 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(header);
     			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(button);
-    			if_block.d();
+    			if (detaching) detach_dev(div4);
+    			if_block0.d();
+    			if_block1.d();
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
