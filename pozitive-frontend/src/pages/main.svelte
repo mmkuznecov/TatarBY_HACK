@@ -56,14 +56,14 @@
                 <h2>Жәмгыятькә кушыл</h2>
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <img class="to-russian-img" src="./assets/button.svg" />
-                <img class="reg-img" src="./assets/img.png" />
+                <a href="/" class="a-class"><img class="reg-img" src="./assets/img.png" /></a>
             </div>
         {:else}
             <div class="reg-block">
                 <h2>Присоединиться к сообществу</h2>
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <img class="to-russian-img" src="./assets/button.svg" />
-                <img class="reg-img" src="./assets/img.png" />
+                <a href="/" class="a-class"><img class="reg-img" src="./assets/img.png" /></a>
             </div>
         {/if}   
     </div>
@@ -71,6 +71,11 @@
 </div>
 
 <style>
+    .a-class {
+      background-color: transparent;
+      text-decoration: none;
+    }
+
     button {
         padding: 0;
         border: none;
