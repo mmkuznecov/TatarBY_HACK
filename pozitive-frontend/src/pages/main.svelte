@@ -49,25 +49,21 @@
         </div>
     {/if}   
 </button>
+<div class="reg-class">
 <button on:click={onClickOutside}>
-    <div class="reg-class">
         {#if isClicked == false}
             <div class="reg-block">
                 <h2>Жәмгыятькә кушыл</h2>
-                <!-- svelte-ignore a11y-missing-attribute -->
-                <img class="to-russian-img" src="./assets/button.svg" />
-                <a href="/" class="a-class"><img class="reg-img" src="./assets/img.png" /></a>
             </div>
         {:else}
             <div class="reg-block">
                 <h2>Присоединиться к сообществу</h2>
-                <!-- svelte-ignore a11y-missing-attribute -->
-                <img class="to-russian-img" src="./assets/button.svg" />
-                <a href="/" class="a-class"><img class="reg-img" src="./assets/img.png" /></a>
             </div>
-        {/if}   
-    </div>
+        {/if} 
 </button>
+<a href="/" class="a-class"><img class="to-russian-img" src="./assets/button.svg" /></a>
+<img class="reg-img" src="./assets/img.png" />
+</div>
 </div>
 
 <style>
