@@ -13,7 +13,7 @@
 }
 
 @font-face {
-	font-family: "Benzin";
+	font-family: "Benzin-Regular";
 	font-style: regular;
 	font-weight: 400;
 	font-display: swap;
@@ -36,11 +36,11 @@ html, body {
 }
 
 button {
-	font-family: Benzin, regular;
+	font-family: "Benzin-Regular";
 }
 
 span {
-	font-family: Benzin, regular;
+	font-family: "Benzin-Regular";
 }
 
 body {
@@ -61,7 +61,7 @@ h1 {
 }
 
 h2 {
-	font-family: Benzin, regular;
+	font-family: "Benzin-Regular";
 }
 
 a:hover {
