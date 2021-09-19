@@ -10,6 +10,7 @@
 		import Main from './pages/main.svelte'
 		import FirstPage from './education_app/pages/First.svelte'
 		import SecondPage from './education_app/pages/Second.svelte'
+		import ZeroPage from './education_app/pages/Zero.svelte'
   
  		export let url = "";
 </script>
@@ -26,6 +27,7 @@
 		 <Route path="main" component={Main} />
 		 <Route path="first" component={FirstPage} />
 		 <Route path="second" component={SecondPage} />
+		 <Route path="zero" component={ZeroPage} />
 	 </div>
 	</Router>
 

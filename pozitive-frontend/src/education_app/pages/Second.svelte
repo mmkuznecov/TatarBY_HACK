@@ -20,7 +20,7 @@
       }
   </script>
   
-  <img src="assets/arrowbefore.svg" class="arrow-before" />
+  <a href="education" class="a-class"><img src="assets/arrowbefore.svg" class="arrow-before" /></a>
   <div class="quiz-section">
     <span>Прочитайте аудиозапись и введите сообщение</span>
     <audio
@@ -37,6 +37,11 @@
 
     audio {
       margin: 20px;
+    }
+
+    .a-class {
+      background-color: transparent;
+      text-decoration: none;
     }
     .correct_button {
       background: green;

@@ -19,14 +19,19 @@
       }
   </script>
   
-  <img src="assets/arrowbefore.svg" class="arrow-before" />
+  <a href="/" class="a-class"><img src="assets/arrowbefore.svg" class="arrow-before" /></a>
   <div class="quiz-section">
-    <a href="education">Уровень 1</a>
+    <a href="zero">Уровень 1</a>
   </div>
   
   <style>
     .correct_button {
       background: green;
+    }
+
+    .a-class {
+      background-color: transparent;
+      text-decoration: none;
     }
   
     .arrow-before {

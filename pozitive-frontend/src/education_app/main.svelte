@@ -20,7 +20,7 @@ import { debug } from "svelte/internal";
     }
 </script>
 
-<img src="assets/arrowbefore.svg" class="arrow-before" />
+<a href="zero" class="a-class"><img src="assets/arrowbefore.svg" class="arrow-before" /></a>
 <div class="quiz-section">
   {#each questions as question}
     <span>{question.question}</span>
@@ -35,6 +35,10 @@ import { debug } from "svelte/internal";
     background: green;
   }
 
+  .a-class {
+      background-color: transparent;
+      text-decoration: none;
+    }
   .arrow-before {
     padding: 10px;
   }
