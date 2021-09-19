@@ -14,12 +14,12 @@
 }
 
 @font-face {
-	font-family: "Benzin-Regular";
+	font-family: "Museocyr";
 	font-style: regular;
 	font-weight: 400;
 	font-display: swap;
 	src: 	url('../fonts/Benzin-Bold.woff') format('font-woff'),
-			url('../fonts/Benzin-Regular.ttf') format('truetype');
+			url('../fonts/Museocyr.ttf') format('truetype');
 }
 
 @font-face {
@@ -38,11 +38,11 @@ html, body {
 }
 
 button {
-	font-family: "Benzin-Regular";
+	font-family: "Museocyr";
 }
 
 span {
-	font-family: "Benzin-Regular";
+	font-family: "Museocyr";
 }
 
 body {
@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Benzin-Regular";
+	font-family: "Museocyr";
 }
 
 a:hover {
