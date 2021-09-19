@@ -6,7 +6,7 @@
   		import Recover from './pages/recover.svelte';
 		import About from './pages/about.svelte';
 		import NotFound from './pages/404.svelte';
-		import EduApp from './education_app/main.svelte'
+		import EduApp from './education_app/App.svelte'
   
  		export let url = "";
 </script>
