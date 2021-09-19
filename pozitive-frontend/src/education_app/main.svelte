@@ -1,72 +1,33 @@
-<svelte:head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap" rel="stylesheet">
-</svelte:head>
 <script>
-  import {fly, fade} from 'svelte/transition';
-  import First from './pages/First.svelte';
-  import Second from './pages/Second.svelte';
-  import Third from './pages/Third.svelte';
-  import Fourth from './pages/Fourth.svelte';
-  import Fifth from './pages/Fifth.svelte';
-  import {pagesStore} from '../stores';
+import { debug } from "svelte/internal";
 
-  const pages = [
-    First,
-    Second,
-    Third,
-    Fourth,
-    Fifth
-  ];
-  $pagesStore.amount = pages.length;
 
-  String.prototype.capitalize = function () {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-  }
+    let answer_input;
+    let questions = [
+      {
+        question_id: '0',
+        question: "Первый вопрос",
+        answer: "test"
+      }
+    ]
 
+    const checkAnswer = (answer_input, correct_answer, question_id) => {
+      if (answer_input == correct_answer) {
+        let x = document.getElementById("submit-button");
+        x.setAttribute("class", "correct_button");
+        console.log(correct_answer);
+      }
+    }
 </script>
 
-<main>
-  <div class="animation-wrapper">
-    {#each Array.from(pages.entries()) as [i, page]}
-      {#if $pagesStore.current === i}
-        <div class="page-wrapper"
-             in:fly={{x: ($pagesStore.current - $pagesStore.last) * 50}}
-             out:fade>
-          <svelte:component this={page}/>
-        </div>
-      {/if}
-    {/each}
-  </div>
-</main>
+{#each questions as question}
+  <div>{question.question}</div>
+  <input bind:value={answer_input}>
+  <button id="submit-button" on:click={checkAnswer(answer_input, question.answer, question.question_id)}>{answer_input}</button>
+{/each}
 
 <style>
-  :root {
-    --hero-fontsize: min(32px ,calc((100vw - 480px) / (1280 - 480) * (32 - 15) + 15px));
-    --plain-fontsize: calc((100vw - 480px) / (1280 - 480) * (22 - 15) + 15px);
+  .correct_button {
+    background: green;
   }
-
-  :global(body) {
-    font-family: Comfortaa, sans-serif;
-  }
-
-  main {
-    width: 100%;
-    height: 100%;
-  }
-
-  .page-wrapper {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .animation-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
 </style>
