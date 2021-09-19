@@ -43,7 +43,7 @@
 	};
 </script>
 
-<Header />
+<Header {accNotFound}/>
 
 {#if accNotFound}
 	<div class="alert" style="display: none;">
@@ -57,7 +57,7 @@
 		{errorMessage}
 	</div>
 	<div class="main">
-		<div class="container">
+		<div class="container-main">
 			<h2>Керергә</h2>
 			<form class="frm" on:submit={submitHandler}>
 				<input
@@ -74,9 +74,8 @@
 					required
 					bind:value={password}
 				/>
-				<p class="forget"><a id="a" href="recover">Забыли пароль?</a></p>
 				<button class="button"
-					><span class="buttonText">Войти</span>
+					><span class="buttonText">Керергә</span>
 					{#if loading}
 						<div class="lds-ellipsis">
 							<div />
@@ -86,11 +85,11 @@
 						</div>
 					{/if}
 				</button>
+				<a class="link" href="signup">Ерак</a>
 			</form>
-			<div class="line" />
-			<a class="link" href="signup">Регистрация</a>
 		</div>
 	</div>
+	<div class="text-decoration"></div>
 {:else}
 	<Web bind:name />
 {/if}
@@ -108,6 +107,7 @@
 		font-size: 80px;
 		margin-left: 40px;
 		color: #181818;
+		margin-bottom: 24px;
 	}
 
 	.main {
@@ -116,10 +116,9 @@
 		height: 100vh;
 		margin-left: 10%;
 		padding: 0;
-		width: 100vh;
 	}
 
-	.container {
+	.container-main {
 		font-family: "Ubuntu", sans-serif;
 		margin: 0;
 		margin-top: 96px;
@@ -133,12 +132,11 @@
 		font-family: "Roboto", sans-serif;
 		font-size: 16px;
 		text-decoration: none;
-		text-align: center;
-		color: #F43737;
+		color: #181818;
 	}
 
 	#a:hover {
-		color: #403866;
+		color: #181818;
 	}
 
 	input {
@@ -147,7 +145,7 @@
 		display: block;
 		width: 100%;
 		background: 0 0;
-		height: 62px;
+		height: 82px;
 		border-left: none;
 		outline: none;
 		border-top: 2px solid #181818;
@@ -155,6 +153,7 @@
 		border-right: none;
 		padding-left: 40px;
 		margin: 0;
+		font-size: 38px;
 	}
 
 	input:first-child {
@@ -162,24 +161,30 @@
 	}
 
 	input::placeholder {
-		color: #a9adaf;
-		font-family: "Ubuntu";
+		color: rgba(0, 0, 0, 0.4);
+		font-family: Museocyr;
+		font-size: 38px;
 	}
 
 	.link {
-		width: 100%;
 		padding: 15px;
+		font-family: 'Benzin', regular;
 		text-align: center;
-		color: #f7f7f7;
-		background-color: var(--primary-color-2);
+		color: #181818;
+		font-size: 24px;
 	}
 
 	.button {
+		margin: 0;
+		margin-top: 40px;
+		padding: 0;
 		width: 170px;
-		padding: 15px;
+		padding: 10px;
 		margin-left: 40px;
-		color: #f7f7f7;
-		background-color: var(--primary-color);
+		color: #F9F9F9;
+		border: none;
+		background-color: #181818;
+		font-size: 24px;
 	}
 
 	.button:hover {
@@ -197,10 +202,7 @@
 		display: flex;
 		margin: 20px 0 20px 0;
 		text-align: center;
-	}
-
-	.link:hover {
-		background-color: var(--primary-color-2);
+		font-size: 24px;
 	}
 
 	.alert {
@@ -219,7 +221,7 @@
 		font-weight: bold;
 		float: right;
 		font-size: 22px;
-		line-height: 20px;
+		line-height: 82px;
 		cursor: pointer;
 		transition: 0.3s;
 	}
@@ -259,6 +261,7 @@
 		left: 56px;
 		animation: lds-ellipsis3 0.6s infinite;
 	}
+
 	@keyframes lds-ellipsis1 {
 		0% {
 			transform: scale(0);
