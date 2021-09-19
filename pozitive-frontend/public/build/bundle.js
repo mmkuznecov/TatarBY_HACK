@@ -25682,20 +25682,20 @@ var app = (function () {
     		h: function hydrate() {
     			if (img.src !== (img_src_value = "./assets/ALGA.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo-svg");
-    			attr_dev(img, "class", "svelte-5zgbob");
+    			attr_dev(img, "class", "svelte-1lx48ij");
     			add_location(img, file$b, 24, 8, 565);
     			attr_dev(a0, "href", "/");
     			set_style(a0, "text-decoration", "none");
-    			attr_dev(a0, "class", "svelte-5zgbob");
+    			attr_dev(a0, "class", "svelte-1lx48ij");
     			add_location(a0, file$b, 23, 4, 513);
     			attr_dev(a1, "href", "education");
-    			attr_dev(a1, "class", "svelte-5zgbob");
+    			attr_dev(a1, "class", "svelte-1lx48ij");
     			add_location(a1, file$b, 26, 4, 625);
-    			attr_dev(div0, "class", "b-marquee__text svelte-5zgbob");
+    			attr_dev(div0, "class", "b-marquee__text svelte-1lx48ij");
     			add_location(div0, file$b, 30, 4, 721);
-    			attr_dev(div1, "class", "b-marquee svelte-5zgbob");
+    			attr_dev(div1, "class", "b-marquee svelte-1lx48ij");
     			add_location(div1, file$b, 29, 3, 692);
-    			attr_dev(header, "class", "svelte-5zgbob");
+    			attr_dev(header, "class", "svelte-1lx48ij");
     			add_location(header, file$b, 22, 0, 499);
     		},
     		m: function mount(target, anchor) {
@@ -25793,17 +25793,17 @@ var app = (function () {
     		h: function hydrate() {
     			if (img.src !== (img_src_value = "./assets/ALGA.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo-svg");
-    			attr_dev(img, "class", "svelte-5zgbob");
+    			attr_dev(img, "class", "svelte-1lx48ij");
     			add_location(img, file$b, 12, 8, 234);
     			attr_dev(a, "href", "main");
     			set_style(a, "text-decoration", "none");
-    			attr_dev(a, "class", "svelte-5zgbob");
+    			attr_dev(a, "class", "svelte-1lx48ij");
     			add_location(a, file$b, 11, 4, 179);
-    			attr_dev(div0, "class", "b-marquee__text svelte-5zgbob");
+    			attr_dev(div0, "class", "b-marquee__text svelte-1lx48ij");
     			add_location(div0, file$b, 18, 4, 399);
-    			attr_dev(div1, "class", "b-marquee svelte-5zgbob");
+    			attr_dev(div1, "class", "b-marquee svelte-1lx48ij");
     			add_location(div1, file$b, 17, 3, 370);
-    			attr_dev(header, "class", "svelte-5zgbob");
+    			attr_dev(header, "class", "svelte-1lx48ij");
     			add_location(header, file$b, 10, 0, 165);
     		},
     		m: function mount(target, anchor) {
@@ -27259,42 +27259,42 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(span0, "class", "closebtn svelte-1qxm89k");
+    			attr_dev(span0, "class", "closebtn svelte-15wabyu");
     			attr_dev(span0, "onclick", "this.parentElement.style.display='none';");
     			add_location(span0, file$9, 49, 2, 1062);
-    			attr_dev(strong, "class", "svelte-1qxm89k");
+    			attr_dev(strong, "class", "svelte-15wabyu");
     			add_location(strong, file$9, 55, 2, 1175);
-    			attr_dev(div0, "class", "alert svelte-1qxm89k");
+    			attr_dev(div0, "class", "alert svelte-15wabyu");
     			set_style(div0, "display", "none");
     			add_location(div0, file$9, 48, 1, 1016);
-    			attr_dev(h2, "class", "svelte-1qxm89k");
+    			attr_dev(h2, "class", "svelte-15wabyu");
     			add_location(h2, file$9, 60, 3, 1284);
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Имя пользователя");
     			input0.required = true;
-    			attr_dev(input0, "class", "svelte-1qxm89k");
+    			attr_dev(input0, "class", "svelte-15wabyu");
     			add_location(input0, file$9, 62, 4, 1355);
     			attr_dev(input1, "id", "password");
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "placeholder", "Пароль");
     			input1.required = true;
-    			attr_dev(input1, "class", "svelte-1qxm89k");
+    			attr_dev(input1, "class", "svelte-15wabyu");
     			add_location(input1, file$9, 69, 4, 1485);
-    			attr_dev(span1, "class", "buttonText svelte-1qxm89k");
+    			attr_dev(span1, "class", "buttonText svelte-15wabyu");
     			add_location(span1, file$9, 77, 6, 1647);
-    			attr_dev(button, "class", "button svelte-1qxm89k");
+    			attr_dev(button, "class", "button svelte-15wabyu");
     			add_location(button, file$9, 76, 4, 1617);
-    			attr_dev(a, "class", "link svelte-1qxm89k");
+    			attr_dev(a, "class", "link svelte-15wabyu");
     			attr_dev(a, "href", "signup");
     			add_location(a, file$9, 87, 4, 1851);
-    			attr_dev(form, "class", "frm svelte-1qxm89k");
+    			attr_dev(form, "class", "frm svelte-15wabyu");
     			add_location(form, file$9, 61, 3, 1305);
-    			attr_dev(div1, "class", "container-main svelte-1qxm89k");
+    			attr_dev(div1, "class", "container-main svelte-15wabyu");
     			add_location(div1, file$9, 59, 2, 1251);
-    			attr_dev(div2, "class", "main svelte-1qxm89k");
+    			attr_dev(div2, "class", "main svelte-15wabyu");
     			add_location(div2, file$9, 58, 1, 1229);
-    			attr_dev(div3, "class", "text-decoration svelte-1qxm89k");
+    			attr_dev(div3, "class", "text-decoration svelte-15wabyu");
     			add_location(div3, file$9, 91, 1, 1923);
     		},
     		m: function mount(target, anchor) {
@@ -27428,15 +27428,15 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(div0, "class", "svelte-1qxm89k");
+    			attr_dev(div0, "class", "svelte-15wabyu");
     			add_location(div0, file$9, 80, 7, 1749);
-    			attr_dev(div1, "class", "svelte-1qxm89k");
+    			attr_dev(div1, "class", "svelte-15wabyu");
     			add_location(div1, file$9, 81, 7, 1765);
-    			attr_dev(div2, "class", "svelte-1qxm89k");
+    			attr_dev(div2, "class", "svelte-15wabyu");
     			add_location(div2, file$9, 82, 7, 1781);
-    			attr_dev(div3, "class", "svelte-1qxm89k");
+    			attr_dev(div3, "class", "svelte-15wabyu");
     			add_location(div3, file$9, 83, 7, 1797);
-    			attr_dev(div4, "class", "lds-ellipsis svelte-1qxm89k");
+    			attr_dev(div4, "class", "lds-ellipsis svelte-15wabyu");
     			add_location(div4, file$9, 79, 6, 1714);
     		},
     		m: function mount(target, anchor) {
@@ -30332,14 +30332,14 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h2, "class", "svelte-ew235u");
+    			attr_dev(h2, "class", "svelte-tlmcwo");
     			add_location(h2, file$1, 43, 24, 1409);
-    			attr_dev(img, "class", "to-russian-img svelte-ew235u");
+    			attr_dev(img, "class", "to-russian-img svelte-tlmcwo");
     			if (img.src !== (img_src_value = "./assets/clik2.png")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$1, 45, 24, 1540);
-    			attr_dev(p, "class", "svelte-ew235u");
+    			attr_dev(p, "class", "svelte-tlmcwo");
     			add_location(p, file$1, 46, 24, 1621);
-    			attr_dev(div, "class", "main-block svelte-ew235u");
+    			attr_dev(div, "class", "main-block svelte-tlmcwo");
     			add_location(div, file$1, 42, 20, 1359);
     		},
     		m: function mount(target, anchor) {
@@ -30410,14 +30410,14 @@ var app = (function () {
     			this.h();
     		},
     		h: function hydrate() {
-    			attr_dev(h2, "class", "svelte-ew235u");
+    			attr_dev(h2, "class", "svelte-tlmcwo");
     			add_location(h2, file$1, 34, 24, 952);
-    			attr_dev(img, "class", "to-russian-img svelte-ew235u");
+    			attr_dev(img, "class", "to-russian-img svelte-tlmcwo");
     			if (img.src !== (img_src_value = "./assets/clik2.png")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$1, 38, 24, 1146);
-    			attr_dev(p, "class", "svelte-ew235u");
+    			attr_dev(p, "class", "svelte-tlmcwo");
     			add_location(p, file$1, 39, 24, 1227);
-    			attr_dev(div, "class", "main-block svelte-ew235u");
+    			attr_dev(div, "class", "main-block svelte-tlmcwo");
     			add_location(div, file$1, 33, 20, 902);
     		},
     		m: function mount(target, anchor) {
@@ -30529,18 +30529,18 @@ var app = (function () {
     			set_style(a0, "text-decoration", "none");
     			add_location(a0, file$1, 19, 8, 407);
     			attr_dev(a1, "href", "/");
-    			attr_dev(a1, "class", "header-button svelte-ew235u");
+    			attr_dev(a1, "class", "header-button svelte-tlmcwo");
     			set_style(a1, "text-decoration", "none");
     			add_location(a1, file$1, 23, 8, 536);
-    			attr_dev(div0, "class", "header svelte-ew235u");
+    			attr_dev(div0, "class", "header svelte-tlmcwo");
     			add_location(div0, file$1, 18, 4, 377);
-    			attr_dev(div1, "class", "b-marquee__text svelte-ew235u");
+    			attr_dev(div1, "class", "b-marquee__text svelte-tlmcwo");
     			add_location(div1, file$1, 27, 4, 659);
-    			attr_dev(div2, "class", "b-marquee svelte-ew235u");
+    			attr_dev(div2, "class", "b-marquee svelte-tlmcwo");
     			add_location(div2, file$1, 26, 3, 630);
-    			attr_dev(header, "class", "svelte-ew235u");
+    			attr_dev(header, "class", "svelte-tlmcwo");
     			add_location(header, file$1, 16, 0, 357);
-    			attr_dev(button, "class", "svelte-ew235u");
+    			attr_dev(button, "class", "svelte-tlmcwo");
     			add_location(button, file$1, 31, 0, 804);
     		},
     		m: function mount(target, anchor) {

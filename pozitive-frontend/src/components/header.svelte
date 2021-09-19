@@ -51,7 +51,7 @@
 	} 
 
 	.vertical-lr {     
-        font-family: Benzin, bold;
+        font-family: "Benzin-Bold";
         font-size: 40px;
 		writing-mode: vertical-lr; 
         height: 100vh;
@@ -72,7 +72,7 @@
     .b-marquee__text {
             -webkit-animation: animMarquee 5s linear infinite;
             animation: animMarquee 3s linear infinite;
-            font-family: Benzin, bold;
+            font-family: "Benzin-Bold";
             font-size: 40px;
             writing-mode: vertical-lr; 
             height: 100vh;

@@ -168,7 +168,7 @@
 
 	.link {
 		padding: 15px;
-		font-family: 'Benzin', regular;
+		font-family: "Benzin-Bold";
 		text-align: center;
 		color: #181818;
 		font-size: 24px;

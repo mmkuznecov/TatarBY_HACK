@@ -5,7 +5,7 @@
 }
 
 @font-face {
-	font-family: "Benzin";
+	font-family: "Benzin-Bold";
 	font-style: bold;
 	font-weight: 400;
 	font-display: swap;
@@ -57,7 +57,7 @@ a {
 }
 
 h1 {
-	font-family: Benzin, bold;
+	font-family: "Benzin-Bold";
 }
 
 h2 {
