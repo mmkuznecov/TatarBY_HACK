@@ -12,6 +12,7 @@
     let hasNoError = true;
     let title = "";
     let text = "";
+    let accNotFound = true;
 
     const submitHandler = (e) => {
         //clears error messages
@@ -183,7 +184,7 @@
     };
 </script>
 
-<Header bind:name />
+<Header {accNotFound} />
 <div class="alert" style="display: none;">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">
         &times;</span
@@ -191,7 +192,8 @@
     <strong> {title} </strong>
     {text}
 </div>
-<div class="container">
+<div class="main">
+<div class="container-main">
     <form
         id="frm"
         on:submit|preventDefault={pswd == cpswd
@@ -232,11 +234,6 @@
             bind:value={cpswd}
             required
         />
-        <p
-            class="para"
-            style="font-family: sans-serif; font-size: 17px; color: crimson"
-        />
-        <div class="line" />
         <input
             id="pet"
             type="text"
@@ -261,8 +258,8 @@
         <p class="skip"><a id="a" href="/">Пропустить</a></p>
         <button class="button button2">Регистрация</button>
     </form>
-    <div class="line" />
     <a class="link" id="a" href="/">Вход</a>
+</div>
 </div>
 
 <style>
@@ -272,11 +269,19 @@
         --primary-color-3: #FFCB00;
     }
 
-    .container {
-        font-family: "Ubuntu", sans-serif;
-        margin: 5rem auto;
+    .main {
         display: grid;
-        justify-content: center;
+		border-left: 2px solid #181818;
+		height: 100vh;
+		margin-left: 10%;
+		padding: 0;
+    }
+
+    .container-main {
+		margin: 0;
+		margin-top: 96px;
+		padding: 0;
+		width: 100%;
     }
 
     .login-text {
@@ -300,23 +305,30 @@
     }
 
     input {
-        line-height: 1.2;
-        font-size: 18px;
-        display: block;
-        width: 100%;
-        background: 0 0;
-        height: 62px;
-        padding: 0 20px 0 38px;
-        background-color: #f7f7f7;
+        line-height: 2;
+		font-size: 18px;
+		display: block;
+		width: 100%;
+		background: 0 0;
+		height: 82px;
+		border-left: none;
+		outline: none;
+		border-top: 2px solid #181818;
+		border-bottom: 2px solid #181818;
+		border-right: none;
+		padding-left: 40px;
+		margin: 0;
+		font-size: 38px;
     }
+
+    input:last-child {
+		border-bottom: none;
+	}
 
     input::placeholder {
-        color: #a9adaf;
-        font-family: "Ubuntu", sans-serif;
-    }
-
-    input:required {
-        border-color: #68d391;
+        color: rgba(0, 0, 0, 0.4);
+		font-family: Museocyr;
+		font-size: 38px;
     }
 
     .link {

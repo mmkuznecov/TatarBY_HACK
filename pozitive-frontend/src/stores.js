@@ -16,8 +16,6 @@ export const formsStore = writable(saved || {firstChoice: 0, secondChoice: 0, lo
 formsStore.subscribe(val => localStorage.setItem("formsStore", JSON.stringify(val)));
 formsStore.subscribe(async val => localStorage.setItem("formsStore", JSON.stringify(val)));
 
-// registration store
-// export const regStore = writable
 
 export function changePage(value) {
   let store = get(pagesStore);

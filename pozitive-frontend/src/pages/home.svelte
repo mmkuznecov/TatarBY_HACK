@@ -43,7 +43,7 @@
 	};
 </script>
 
-<Header bind:name />
+<Header {accNotFound}/>
 
 {#if accNotFound}
 	<div class="alert" style="display: none;">
@@ -56,38 +56,40 @@
 		<strong>Ошибка.</strong>
 		{errorMessage}
 	</div>
-	<div class="container">
-		<form class="frm" on:submit={submitHandler}>
-			<input
-				id="name"
-				type="text"
-				placeholder="Имя пользователя"
-				required
-				bind:value={name}
-			/>
-			<input
-				id="password"
-				type="password"
-				placeholder="Пароль"
-				required
-				bind:value={password}
-			/>
-			<p class="forget"><a id="a" href="recover">Забыли пароль?</a></p>
-			<button class="button"
-				><span class="buttonText">Войти</span>
-				{#if loading}
-					<div class="lds-ellipsis">
-						<div />
-						<div />
-						<div />
-						<div />
-					</div>
-				{/if}
-			</button>
-		</form>
-		<div class="line" />
-		<a class="link" href="signup">Регистрация</a>
+	<div class="main">
+		<div class="container-main">
+			<h2>Керергә</h2>
+			<form class="frm" on:submit={submitHandler}>
+				<input
+					id="name"
+					type="text"
+					placeholder="Имя пользователя"
+					required
+					bind:value={name}
+				/>
+				<input
+					id="password"
+					type="password"
+					placeholder="Пароль"
+					required
+					bind:value={password}
+				/>
+				<button class="button"
+					><span class="buttonText">Керергә</span>
+					{#if loading}
+						<div class="lds-ellipsis">
+							<div />
+							<div />
+							<div />
+							<div />
+						</div>
+					{/if}
+				</button>
+				<a class="link" href="signup">Ерак</a>
+			</form>
+		</div>
 	</div>
+	<div class="text-decoration"></div>
 {:else}
 	<Web bind:name />
 {/if}
@@ -101,11 +103,27 @@
         --primary-color-3: #FFCB00;
     }
 
-	.container {
-		font-family: "Ubuntu", sans-serif;
-		margin: 10rem auto;
+	h2 {
+		font-size: 80px;
+		margin-left: 40px;
+		color: #181818;
+		margin-bottom: 24px;
+	}
+
+	.main {
 		display: grid;
-		justify-content: center;
+		border-left: 2px solid #181818;
+		height: 100vh;
+		margin-left: 10%;
+		padding: 0;
+	}
+
+	.container-main {
+		font-family: "Ubuntu", sans-serif;
+		margin: 0;
+		margin-top: 96px;
+		padding: 0;
+		width: 100%;
 	}
 	
 	.forget,
@@ -114,47 +132,59 @@
 		font-family: "Roboto", sans-serif;
 		font-size: 16px;
 		text-decoration: none;
-		text-align: center;
-		color: #F43737;
+		color: #181818;
 	}
 
 	#a:hover {
-		color: #403866;
+		color: #181818;
 	}
 
 	input {
-		line-height: 1.2;
+		line-height: 2;
 		font-size: 18px;
 		display: block;
 		width: 100%;
 		background: 0 0;
-		height: 62px;
-		padding: 0 20px 0 38px;
-		background-color: #f7f7f7;
+		height: 82px;
+		border-left: none;
+		outline: none;
+		border-top: 2px solid #181818;
+		border-bottom: 2px solid #181818;
+		border-right: none;
+		padding-left: 40px;
+		margin: 0;
+		font-size: 38px;
 	}
 
-	input:required {
-		border-color: var(--primary-color-2);
+	input:first-child {
+		border-bottom: none;
 	}
 
 	input::placeholder {
-		color: #a9adaf;
-		font-family: "Ubuntu";
+		color: rgba(0, 0, 0, 0.4);
+		font-family: Museocyr;
+		font-size: 38px;
 	}
 
 	.link {
-		width: 100%;
 		padding: 15px;
+		font-family: 'Benzin', regular;
 		text-align: center;
-		color: #f7f7f7;
-		background-color: var(--primary-color-2);
+		color: #181818;
+		font-size: 24px;
 	}
 
 	.button {
-		width: 100%;
-		padding: 15px;
-		color: #f7f7f7;
-		background-color: var(--primary-color);
+		margin: 0;
+		margin-top: 40px;
+		padding: 0;
+		width: 170px;
+		padding: 10px;
+		margin-left: 40px;
+		color: #F9F9F9;
+		border: none;
+		background-color: #181818;
+		font-size: 24px;
 	}
 
 	.button:hover {
@@ -172,10 +202,7 @@
 		display: flex;
 		margin: 20px 0 20px 0;
 		text-align: center;
-	}
-
-	.link:hover {
-		background-color: var(--primary-color-2);
+		font-size: 24px;
 	}
 
 	.alert {
@@ -194,7 +221,7 @@
 		font-weight: bold;
 		float: right;
 		font-size: 22px;
-		line-height: 20px;
+		line-height: 82px;
 		cursor: pointer;
 		transition: 0.3s;
 	}
@@ -234,6 +261,7 @@
 		left: 56px;
 		animation: lds-ellipsis3 0.6s infinite;
 	}
+
 	@keyframes lds-ellipsis1 {
 		0% {
 			transform: scale(0);
