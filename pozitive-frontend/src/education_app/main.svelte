@@ -20,18 +20,29 @@ import { debug } from "svelte/internal";
     }
 </script>
 
+<img src="assets/arrowbefore.svg" class="arrow-before" />
 <div class="quiz-section">
   {#each questions as question}
+    <span>{question.question}</span>
     <img src="assets/quiz.png" />
-    <div>{question.question}</div>
     <input bind:value={answer_input} placeholder="Введите ваш ответ здесь">
-    <button id="submit-button" on:click={checkAnswer(answer_input, question.answer, question.question_id)}>Ответить</button>
+    <a href="second">Эш җибәрү</a>
   {/each}
 </div>
 
 <style>
   .correct_button {
     background: green;
+  }
+
+  .arrow-before {
+    padding: 10px;
+  }
+
+  span {
+    font-family: Benzin-Bold;
+    font-size: 24px;
+    color: #181818;
   }
 
   img {
@@ -65,10 +76,28 @@ import { debug } from "svelte/internal";
 	}
 
   .quiz-section {
+    position: absolute;
+    top: 40%;
+    float: center;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
   }
+
+  a  { 
+    margin: 0;
+		padding: 10px;
+    margin-top: 20px;
+		width: 170px;
+		color: #F9F9F9;
+    font-family: Museocyr;
+		border: none;
+		background-color: #181818;
+		font-size: 24px;
+    border-radius: 43px;
+    text-align: center;
+  }
+
 </style>

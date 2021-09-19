@@ -24,7 +24,7 @@
     <a href="/" style="text-decoration: none">
         <img src="./assets/ALGA.svg" alt="logo-svg">
     </a>
-    <a href="education">Обучение</a>
+    <a href="first">Обучение</a>
     <UserMenu bind:name />
 
    <div class="b-marquee">

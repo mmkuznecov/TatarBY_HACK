@@ -38,14 +38,14 @@
                 мәктәп</h2>
             <!-- svelte-ignore a11y-missing-attribute -->
             <img class="to-russian-img" src="./assets/clik2.png" />
-            <p>Наводите на текст, чтобы переводить его на русский</p>
+            <p>Нажимайте на текст, чтобы переводить его на русский</p>
         </div>
     {:else}
         <div class="main-block">
             <h2>Обучение татарскому языку</h2>
             <!-- svelte-ignore a11y-missing-attribute -->
             <img class="to-russian-img" src="./assets/clik2.png" />
-            <p>Наводите на текст, чтобы переводить его на русский</p>
+            <p>Нажимайте на текст, чтобы переводить его на русский</p>
         </div>
     {/if}   
 </button>
