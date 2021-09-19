@@ -43,7 +43,7 @@
 	};
 </script>
 
-<Header bind:name />
+<Header />
 
 {#if accNotFound}
 	<div class="alert" style="display: none;">
@@ -56,37 +56,40 @@
 		<strong>Ошибка.</strong>
 		{errorMessage}
 	</div>
-	<div class="container">
-		<form class="frm" on:submit={submitHandler}>
-			<input
-				id="name"
-				type="text"
-				placeholder="Имя пользователя"
-				required
-				bind:value={name}
-			/>
-			<input
-				id="password"
-				type="password"
-				placeholder="Пароль"
-				required
-				bind:value={password}
-			/>
-			<p class="forget"><a id="a" href="recover">Забыли пароль?</a></p>
-			<button class="button"
-				><span class="buttonText">Войти</span>
-				{#if loading}
-					<div class="lds-ellipsis">
-						<div />
-						<div />
-						<div />
-						<div />
-					</div>
-				{/if}
-			</button>
-		</form>
-		<div class="line" />
-		<a class="link" href="signup">Регистрация</a>
+	<div class="main">
+		<div class="container">
+			<h2>Керергә</h2>
+			<form class="frm" on:submit={submitHandler}>
+				<input
+					id="name"
+					type="text"
+					placeholder="Имя пользователя"
+					required
+					bind:value={name}
+				/>
+				<input
+					id="password"
+					type="password"
+					placeholder="Пароль"
+					required
+					bind:value={password}
+				/>
+				<p class="forget"><a id="a" href="recover">Забыли пароль?</a></p>
+				<button class="button"
+					><span class="buttonText">Войти</span>
+					{#if loading}
+						<div class="lds-ellipsis">
+							<div />
+							<div />
+							<div />
+							<div />
+						</div>
+					{/if}
+				</button>
+			</form>
+			<div class="line" />
+			<a class="link" href="signup">Регистрация</a>
+		</div>
 	</div>
 {:else}
 	<Web bind:name />
@@ -101,11 +104,27 @@
         --primary-color-3: #FFCB00;
     }
 
+	h2 {
+		font-size: 80px;
+		margin-left: 40px;
+		color: #181818;
+	}
+
+	.main {
+		display: grid;
+		border-left: 2px solid #181818;
+		height: 100vh;
+		margin-left: 10%;
+		padding: 0;
+		width: 100vh;
+	}
+
 	.container {
 		font-family: "Ubuntu", sans-serif;
-		margin: 10rem auto;
-		display: grid;
-		justify-content: center;
+		margin: 0;
+		margin-top: 96px;
+		padding: 0;
+		width: 100%;
 	}
 	
 	.forget,
@@ -123,18 +142,23 @@
 	}
 
 	input {
-		line-height: 1.2;
+		line-height: 2;
 		font-size: 18px;
 		display: block;
 		width: 100%;
 		background: 0 0;
 		height: 62px;
-		padding: 0 20px 0 38px;
-		background-color: #f7f7f7;
+		border-left: none;
+		outline: none;
+		border-top: 2px solid #181818;
+		border-bottom: 2px solid #181818;
+		border-right: none;
+		padding-left: 40px;
+		margin: 0;
 	}
 
-	input:required {
-		border-color: var(--primary-color-2);
+	input:first-child {
+		border-bottom: none;
 	}
 
 	input::placeholder {
@@ -151,8 +175,9 @@
 	}
 
 	.button {
-		width: 100%;
+		width: 170px;
 		padding: 15px;
+		margin-left: 40px;
 		color: #f7f7f7;
 		background-color: var(--primary-color);
 	}
